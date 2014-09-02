@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<div class="page-header">
+  <h1><b><%= @post.name %></b></h1>
+</div>
+
+<p>
+  <strong>Format:</strong>
+  <%= @post.format %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @post.length %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @post.size %>
+  <%= @post.filesize %>
+</p>
+
+<button type="button" class="btn btn-default btn">
+  <%= link_to 'Edit', edit_post_path(@post) %> </button> |
+<button type="button" class="btn btn-default btn">
+  <%= link_to 'Back', posts_path %></button>

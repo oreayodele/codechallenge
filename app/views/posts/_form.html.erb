@@ -1,0 +1,39 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field ">
+    <%= f.label :name %>:
+    <%= f.text_field :name %>
+  </div><br>
+  
+  <div class="field ">
+    <%= f.label :format %>:
+	<%= f.select :format, [['MP3', "MP3"], ['WAV', 2], ['AIFF', 3], ['M4A', 4], ['CD', "CD"], ['8 Track', "8 Track"], ['MP4', "MP4"], ['ACC', "ACC"], ['WMA', "WMA"]] %>  </div><br>
+	
+  <div class="field ">
+    <%= f.label :length %>:
+    <%= f.text_field :length,  :value => "hh:ss" %>
+  </div><br>
+  
+  <div class="field ">
+   <%= f.label :size %>:
+    <%= f.text_field :size %>
+    <%= f.select :filesize, [['KB', "KB"], ['MB', "MB"], ['GB', "GB"]] %>
+  </div>
+  <br><br>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
