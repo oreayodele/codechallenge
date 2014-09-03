@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   resources :posts
   
-  root :to => 'posts#index'
+  root :to => 'posts#landing'
 
+	resources :posts do
+	  collection do
+	    get 'landing'
+	  end
+	end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -57,4 +62,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  
 end

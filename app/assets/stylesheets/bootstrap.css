@@ -14,6 +14,19 @@ body {
   margin: 0;
   background-image: url('subtle_white_feathers.png');
 }
+
+.landing12 {
+	background: url('3.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+  
+.enterimg img{
+	max-width: 350px;
+	max-height: 350px;}
+  
 article,
 aside,
 details,
@@ -4098,8 +4111,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  _background-color: #f8f8f8;
+  _border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
   color: #fff;
