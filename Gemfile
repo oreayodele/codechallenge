@@ -3,12 +3,12 @@ source 'https://rubygems.org'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 # Use postgresql as the database for Active Record
-	group :production do
+	group :production, :staging  do
 	  gem 'pg'
+	  gem 'rails_12factor'
 	end
 	group :development, :test do
 	  gem 'pg'
